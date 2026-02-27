@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css">
+  <title>lista_tareas_personales</title>
+</head>
+<!--Altura al 100vh de la pantalla-->
+<body class="flex flex-col items-center justify-center h-screen box-border md:box-border">
+    <form action="" method="get" class="size-[50%] border shadow-2xs rounded-lg p-6">
+      <h1 class="text-3xl font-bold mb-4">Lista de tareas personales</h1>
+      <!--Caja de texto y boton del formulario-->
+      <div class="flex mb-4 flex-wrap">
+        <input type="text" id="taskInput" placeholder="Agregar nueva tarea" class="flex-1 p-2 border mr-4 rounded-l" />
+        <!--Aca tenemos un boton que agrega tareas al -->
+        <button type="submit" id="addTaskButton" class="bg-blue-500 text-white p-2 rounded-r">Agregar</button>
+      </div>
+      <ul id="taskList" class="">
+        <!-- Las tareas se agregarán aquí dinámicamente -->
+      </ul>
+    </form>
+  <script type="module" src="/src/main.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -7,18 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/src/style.css">
   <title>lista_tareas_personales</title>
+  <style>
+    .form{
+      scrollbar-width: none;
+    }
+  </style>
 </head>
 <!--Altura al 100vh de la pantalla-->
 <body class="flex flex-col items-center justify-center h-screen box-border md:box-border">
-    <form action="" method="get" class="size-[50%] border shadow-2xs rounded-lg p-6">
+    <form action="" method="get" class="form size-[50%] border shadow-xl rounded-lg w-full p-6 sm:w-3/4 md:w-1/2 lg:w-1/3 h-full sm:h-1/2 md:h-3/4 lg:h-1/2 overflow-x-scroll">
       <h1 class="text-3xl font-bold mb-4">Lista de tareas personales</h1>
       <!--Caja de texto y boton del formulario-->
-      <div class="flex mb-4 flex-wrap">
-        <input type="text" id="taskInput" placeholder="Agregar nueva tarea" class="flex-1 p-2 border mr-4 rounded-l" />
+      <div class="flex mb-3 flex-wrap gap-2 top-0 left-0 right-0 bg-white z-10">
+        <input type="text" id="taskInput" placeholder="Agregar nueva tarea" class="w-full p-2 border mr-4 rounded-xl sm:w-full md:flex-1" />
         <!--Aca tenemos un boton que agrega tareas al -->
-        <button type="submit" id="addTaskButton" class="bg-blue-500 text-white p-2 rounded-r">Agregar</button>
+        <button type="button" id="addTaskButton" class="bg-blue-500 text-white p-2 rounded-xl" onclick="agregarTarea()">Agregar</button>
       </div>
-      <ul id="taskList" class="">
+      <ul id="taskList" class="text-lg">
         <!-- Las tareas se agregarán aquí dinámicamente -->
       </ul>
     </form>
